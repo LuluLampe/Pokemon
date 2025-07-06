@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* POKEMON */
+
+body {
+    font-family: 'Press Start 2P' ,sans-serif;
+    
+}
+
+header {
+    text-align: center;
+    background-color: orange;
+    padding: 1rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-content: center;
+    gap: 1rem;
+    
+}
+
+.box {
+    background-color: orange;
+    text-align: center;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+
+.box:hover ,box:focus{
+    background: radial-gradient(rgb(237, 170, 13), rgb(255, 238, 2) );
+    transform: scale(1.01);
+}
+
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .box {
+        margin: 1rem;
+    }
+}
+
+/* Laptops (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .box {
+        margin: 1rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .box {
+        margin: 1rem;
+    }
+}
+
+/* Large phones (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .box {
+        margin: 1rem;
+    }
+}
+
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .box {
+        margin: .3rem;
+    }
+}
